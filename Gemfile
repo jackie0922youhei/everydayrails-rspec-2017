@@ -18,8 +18,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6.0'
   gem "factory_bot_rails", "~> 4.10.0"
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.15.2'
-  gem 'selenium-webdriver'
 end
 
 group :development do
@@ -31,6 +29,15 @@ group :development do
   gem 'spring-commands-rspec'
 end
 
+group :test do
+  gem 'chromedriver-helper'
+  gem 'webdrivers'
+  gem 'selenium-webdriver'
+  gem 'launchy', '~> 2.4.3'
+  gem 'vcr'
+  gem 'webmock'
+end
+
 gem 'tzinfo-data'
 
 gem 'bootstrap-sass'
@@ -38,3 +45,4 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'paperclip'
 gem 'geocoder'
+gem 'capybara'
