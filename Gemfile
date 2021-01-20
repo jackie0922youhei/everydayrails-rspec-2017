@@ -30,7 +30,7 @@ group :development do
 end
 
 group :test do
-  gem 'chromedriver-helper'
+  # gem 'chromedriver-helper'
   gem 'webdrivers'
   gem 'selenium-webdriver'
   gem 'launchy', '~> 2.4.3'
