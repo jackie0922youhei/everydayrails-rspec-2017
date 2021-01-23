@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.feature "Projects", type: :feature do
-  # include LoginSupport
+  include LoginSupport
 
   # ユーザーは新しいプロジェクトを作成する
   scenario "user creates a new project" do
     user = FactoryBot.create(:user)
-    sign_in user
+    sign_in_as user
     visit root_path
 
     expect {
@@ -20,10 +20,4 @@ RSpec.feature "Projects", type: :feature do
       expect(page).to have_content "Test Project"
       expect(page).to have_content "Owner: #{user.name}"
   end
-
-  # scenario "guest adds a project" do
-  #   visit projects_path
-  #   save_and_open_page
-  #   click_link "New Project"
-  # end
 end
